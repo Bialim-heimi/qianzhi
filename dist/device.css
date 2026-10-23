@@ -1,0 +1,130 @@
+/* Panel geometry follows Apple pixel dimensions. JS preserves pixel-density-normalized size. */
+header{height:76px;max-width:1280px;margin:auto;padding:0 30px}
+footer{max-width:1280px;margin:auto;padding:14px 30px}
+.device-experience{max-width:1100px;margin:auto;padding:20px 32px 8px}
+.device-meta{display:flex;justify-content:space-between;max-width:908px;margin:0 auto 16px;color:#6c7969;font-size:11px;letter-spacing:2px}
+.device-meta span:last-child{font-size:10px;letter-spacing:1px}
+.device-mount{position:relative;width:100%;height:652px;transition:height .95s cubic-bezier(.22,.8,.25,1)}
+.device-frame{position:absolute;left:50%;top:0;width:908px;height:644px;padding:9px;border-radius:39px;background:linear-gradient(130deg,#adb0a8,#383e38 35%,#777d72 80%,#c3c5bb);box-shadow:0 24px 55px #25332626,0 3px 7px #0c160f44,inset 0 0 0 1px #dbddd2;transform:translateX(-50%);transform-origin:top center;transition:width .95s cubic-bezier(.22,.8,.25,1),height .95s cubic-bezier(.22,.8,.25,1),transform .3s}
+.device-screen{position:relative;isolation:isolate;width:890px;height:626px;border-radius:31px;overflow:hidden;background:#f5efdf;box-shadow:0 0 0 3px #121a16;transition:width .95s cubic-bezier(.22,.8,.25,1),height .95s cubic-bezier(.22,.8,.25,1);background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.045' filter='url(%23n)'/%3E%3C/svg%3E")}
+.device-screen:after{content:'';position:absolute;z-index:3;top:0;bottom:0;left:50%;width:2px;pointer-events:none;background:linear-gradient(90deg,#182c1610,#ffffff45);box-shadow:-8px 0 20px #293b1905;transition:opacity .5s}
+.cover-screen .device-screen:after{opacity:0}
+.screen-content{position:absolute;inset:35px 0 25px;z-index:1}
+.device-caption{text-align:center;font:11px/1.8 'SimSun',serif;letter-spacing:2px;color:#838c79;margin:16px 0 8px}
+#deviceScreen #ritualPage{display:block;width:100%;max-width:none;height:100%;min-height:0;margin:0;padding:15px 44px 0}
+#deviceScreen .intro{display:none}
+#deviceScreen .ritual{height:100%;display:grid;grid-template-rows:28px minmax(0,1fr) 88px}
+#deviceScreen .stage-label{max-width:none;margin:0;align-items:center;color:#8a846e;font-size:10px;letter-spacing:2px}
+#deviceScreen .stage-label span:last-child{font-size:8px;letter-spacing:2px}
+#deviceScreen .paper-wrap{height:auto;min-height:0;align-items:stretch}
+#deviceScreen .paper{width:100%;max-width:none;height:100%;padding:12px 8px 0;background:none;box-shadow:none;transform:none}
+#deviceScreen .paper-top{font-size:10px}
+#deviceScreen .paper-seal{border:1px solid #aa6957;padding:6px}
+#deviceScreen .crease{display:none}
+#deviceScreen .under-note{display:none}
+#deviceScreen #writing{max-width:620px;margin:0 auto}
+#deviceScreen label{margin-top:29px;text-align:center;font-size:26px;letter-spacing:3px}
+#deviceScreen textarea{display:block;margin:20px auto 0;width:100%;height:153px;font-size:19px;line-height:38px;padding:0 8px}
+#deviceScreen textarea::placeholder{font-size:15px}
+#deviceScreen .vertical{right:8px;top:120px;font-size:13px;letter-spacing:8px}
+#deviceScreen .count{margin:8px 0 0}
+#deviceScreen .paper-footer{margin-top:15px;padding-top:14px;font-size:11px}
+#deviceScreen .actions{margin:0;min-height:0;align-self:end;padding-bottom:5px}
+#deviceScreen .actions>p{font-size:11px;line-height:1.5;margin:0 0 10px;letter-spacing:1px}
+#deviceScreen .actions>button{min-width:240px;padding:13px 25px;min-height:44px}
+/* Folded phone: no inner screen remains visible. Everything lives on the cover. */
+.cover-screen #deviceScreen #ritualPage{padding:20px 29px 0}
+.cover-screen #deviceScreen .stage-label span:last-child{display:none}
+.cover-screen #deviceScreen .ritual{grid-template-rows:28px minmax(0,1fr) 93px}
+.cover-screen #deviceScreen .paper{padding:20px 20px 12px;width:100%;background:#eee5d1;box-shadow:3px 4px 0 #ddd1b7,0 15px 24px #2f3d2912;border:1px solid #c2b39566;border-radius:2px}
+.cover-screen #deviceScreen .paper.folded{transform:none}
+.cover-screen #deviceScreen .paper-top{font-size:9px}
+.cover-screen #deviceScreen .paper-seal{font-size:9px;padding:5px}
+.cover-screen #deviceScreen .fold-mark{width:50px;height:50px;margin:25px auto 24px;font-size:23px}
+.cover-screen #deviceScreen #folded h2{font-size:24px;margin:22px 0 12px;letter-spacing:4px}
+.cover-screen #deviceScreen #folded p{font-size:13px;line-height:1.9;margin:0}
+.cover-screen #deviceScreen .beads{margin:18px 0 9px;gap:19px}
+.cover-screen #deviceScreen #shake{min-height:44px;padding:9px 16px;font-size:14px}
+.cover-screen #deviceScreen #motion{min-height:38px;font-size:11px}
+.cover-screen #deviceScreen .actions{padding-top:13px}
+.cover-screen #deviceScreen .actions>p{max-width:320px;margin:0 auto 10px;line-height:1.7}
+#deviceScreen .paper.shake{animation:cover-shake .5s}
+@keyframes cover-shake{20%,60%{transform:translateX(-7px) rotate(-3deg)}40%,80%{transform:translateX(7px) rotate(3deg)}}
+/* On reveal, moonlight belongs to the inner display, not the browser outside it. */
+.reveal-scene{background-color:#e8e9e1}
+.reveal-scene header,.reveal-scene footer{border-color:#293c3219}
+.reveal-scene .brand{color:var(--ink)}
+.reveal-scene header .quiet,.reveal-scene footer,.reveal-scene footer .quiet{color:#818979}
+#deviceScreen .atmosphere{position:absolute;z-index:0}
+#deviceScreen .moon{width:170px;right:10%;top:9%}
+#deviceScreen .halo,#deviceScreen .mist{animation-play-state:paused}
+.reveal-scene #deviceScreen .halo,.reveal-scene #deviceScreen .mist{animation-play-state:running}
+.reveal-scene #deviceScreen .ritual{grid-template-rows:28px minmax(0,1fr) 82px}
+.reveal-scene #deviceScreen .stage-label{color:#bbc3ab;margin-bottom:0}
+.reveal-scene #deviceScreen .paper{margin:7px auto 15px;width:100%;height:calc(100% - 22px);padding:22px 32px;background-color:#eee5cc;box-shadow:0 18px 45px #08171170;animation:paper-unveil 1.5s cubic-bezier(.16,1,.3,1) both}
+.reveal-scene #deviceScreen .paper:after{inset:10px}
+.reveal-scene #deviceScreen .paper-top{font-size:10px}
+.reveal-scene #deviceScreen .paper-seal{border:0;padding:0}
+.reveal-scene #deviceScreen #result{height:calc(100% - 15px);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 40px;align-items:center;position:relative}
+.reveal-scene #deviceScreen .result-no{position:absolute;top:33px;left:0;width:50%;font-size:11px;letter-spacing:4px;margin:0;animation:ink-arrive 1.4s .35s both}
+.reveal-scene #deviceScreen #resultTitle{grid-column:1;grid-row:1;font-size:43px;line-height:1.6;letter-spacing:9px;margin:22px 0 0;padding-left:9px}
+.reveal-scene #deviceScreen .poem{grid-column:2;grid-row:1;align-self:center;height:190px;font-size:28px;line-height:1.8;letter-spacing:9px;gap:30px;margin-top:6px}
+.reveal-scene #deviceScreen .reveal-bottom{grid-column:1 / -1;grid-row:2;margin:0;font-size:10px;letter-spacing:3px}
+.reveal-scene #deviceScreen .result-seal{bottom:50px;right:8px;font-size:11px;width:28px}
+.reveal-scene #deviceScreen .actions{padding-bottom:1px}
+.reveal-scene #deviceScreen .actions>p{color:#b6bea9;font-size:11px;margin-bottom:10px}
+#deviceScreen .read-meaning{min-height:44px;padding:12px 28px}
+/* Final reading uses the same inner panel. Long questions scroll within its safe area. */
+#deviceScreen #interpretationPage{width:100%;height:100%;max-width:none;min-height:0;padding:10px 42px 8px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#a6aa98 transparent}
+#deviceScreen .reading-nav{margin-bottom:12px;min-height:32px}
+#deviceScreen .reading-paper{display:grid;grid-template-columns:.8fr 1.2fr;column-gap:42px;padding:24px 30px 20px;box-shadow:none;background:#f8f2e5}
+#deviceScreen .reading-eyebrow{grid-column:1;grid-row:1}
+#deviceScreen .reading-paper h1{grid-column:1;grid-row:2;font-size:29px;letter-spacing:2px;margin:10px 0 8px}
+#deviceScreen .reading-lot{grid-column:1;grid-row:3;font-size:12px;margin:8px 0 0;line-height:1.7}
+#deviceScreen .reading-rule{display:none}
+#deviceScreen .meaning-text{grid-column:2;grid-row:1 / 4;font-size:20px;line-height:2.05;margin:0}
+#deviceScreen .question-recall{grid-column:1 / -1;margin-top:22px;padding-top:16px}
+#deviceScreen .question-recall p{line-height:1.8;font-size:13px;max-height:86px;overflow:auto}
+#deviceScreen .reading-close{grid-column:1 / -1;margin:16px 0 0;font-size:11px}
+#deviceScreen .reading-actions{margin-top:17px;gap:20px}
+#deviceScreen .reading-actions button{min-height:44px}
+#deviceScreen .final-hint{margin:12px 0 0;font-size:10px}
+@media(max-width:800px){header{margin:0 20px;padding:0;height:68px}.device-experience{padding:20px 18px 10px}.device-meta{font-size:10px;letter-spacing:1px}.device-meta span:last-child{font-size:9px}.device-caption{font-size:10px;letter-spacing:1px}footer{margin:0 20px;padding:12px 0}.brand small{display:none}}
+@media(prefers-reduced-motion:reduce){.device-frame,.device-screen,.device-mount{transition:none!important}}
+/* Keep all cover actions within the smaller display's content area. */
+.cover-screen #deviceScreen .fold-mark{width:44px;height:44px;margin:14px auto;font-size:22px}
+.cover-screen #deviceScreen #folded h2{margin:12px 0 10px;font-size:23px;line-height:1.2}
+.cover-screen #deviceScreen #folded p{line-height:1.8}
+.cover-screen #deviceScreen .beads{margin:14px 0 6px}
+/* App-only presentation. D-shaped cover: nearly square hinge edge, rounded outer edge. */
+.device-frame{padding:3px;border-radius:34px;background:#334035;box-shadow:0 18px 50px #25332620}
+.device-frame.cover-screen{border-radius:7px 64px 64px 7px}
+.cover-screen .device-screen{border-radius:4px 61px 61px 4px}
+.screen-content{inset:22px 0}
+.wish-note{position:absolute;right:8px;top:105px;color:#9e9278;font:12px 'SimSun',serif;letter-spacing:3px;writing-mode:horizontal-tb}
+#deviceScreen .actions{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0}
+#deviceScreen .ritual{grid-template-rows:28px minmax(0,1fr) 66px}
+.cover-screen #deviceScreen #ritualPage{padding:24px 42px 8px 22px}
+.cover-screen #deviceScreen .ritual{grid-template-rows:28px minmax(0,1fr) 68px}
+.cover-screen #deviceScreen .paper{max-height:456px;align-self:center}
+.cover-screen #deviceScreen #folded p{max-width:250px;margin:0 auto}
+.reveal-scene #deviceScreen .poem{height:auto;display:flex;flex-direction:column;gap:19px;margin:0;font-size:29px;line-height:1.8;letter-spacing:5px}
+#deviceScreen .poem-line{writing-mode:horizontal-tb;text-orientation:mixed;white-space:normal}
+.reveal-scene #deviceScreen #resultTitle{font-size:40px;letter-spacing:7px}
+.sensor-status{text-align:center;font:11px/1.7 sans-serif;color:#857b63;margin:4px 0 12px}
+.preview-tools{max-width:520px;margin:10px auto 20px;border-top:1px solid #a8ad9c44;padding-top:12px;color:#777e70;font-size:11px}
+.preview-tools summary{cursor:pointer;letter-spacing:1px}
+.preview-tools p{font-size:11px;line-height:1.8}
+.preview-tools label{font:12px sans-serif;margin:12px 0 8px;letter-spacing:1px;display:flex;justify-content:space-between}
+.preview-tools input{width:100%;accent-color:#48604b;min-height:36px}
+/* Native host uses real available bounds. Hardware and iOS draw the outline and system chrome. */
+.native-host{height:100dvh;overflow:hidden;background:var(--paper)}
+.native-host>header,.native-host>footer,.native-host .device-meta,.native-host .device-caption,.native-host .sensor-status,.native-host .preview-tools{display:none!important}
+.native-host .device-experience,.native-host .device-mount,.native-host .device-frame,.native-host .device-screen{position:relative;inset:auto;width:100%!important;height:100%!important;max-width:none;margin:0;padding:0;border:0;border-radius:0!important;transform:none!important;box-shadow:none;transition:none}
+.native-host .screen-content{inset:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
+.native-host #deviceScreen #ritualPage{padding:12px 22px 0}
+.native-host #deviceScreen #interpretationPage{padding:10px 20px;overflow:auto}
+.native-host .cover-screen #deviceScreen #ritualPage{padding:12px 20px 0 10px;overflow:auto}
+.native-host .cover-screen #deviceScreen .paper{height:auto;min-height:355px}
+.native-host .cover-screen #deviceScreen .ritual{min-height:455px}
+@media(max-width:650px){.native-host #deviceScreen #result{display:flex;flex-direction:column;justify-content:center;gap:18px}.native-host #deviceScreen .result-no{position:static;width:auto}.native-host #deviceScreen #resultTitle{margin:0;font-size:30px}.native-host #deviceScreen .poem{font-size:22px;gap:8px}.native-host #deviceScreen .reveal-bottom{margin:12px 0 0}.native-host #deviceScreen .reading-paper{display:block;padding:20px}.native-host #deviceScreen .meaning-text{margin-top:20px}.native-host #deviceScreen textarea{height:120px}.native-host #deviceScreen label{font-size:22px}.native-host .wish-note{display:none}}

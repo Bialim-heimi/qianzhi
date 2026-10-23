@@ -1,0 +1,57 @@
+/* Selected direction A: warm handmade paper, flowing ink, one continuous sheet. */
+@font-face{font-family:'Qian Calligraphy';src:url('fonts/Slideqiuhong-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+:root{--brush:'Qian Calligraphy','Qian Brush',serif;--paper:#f2e9d7;--ink:#29251f;--red:#a33d29}
+.single-sheet #deviceScreen{background-color:#f2e9d7;background-image:url('paper-a.png');background-size:cover;background-position:center;color:#29251f}
+.single-sheet #deviceScreen:before{background:linear-gradient(105deg,#fffdf01a,transparent 65%);box-shadow:none;mix-blend-mode:normal}
+.single-sheet #deviceScreen:after{opacity:.25}
+.single-sheet #deviceScreen .paper-top{color:#867358;opacity:.6}
+.single-sheet #deviceScreen #inkPlaceholder span{font-size:25px;color:#82715a;letter-spacing:5px;opacity:.5}
+.single-sheet #deviceScreen textarea{color:#29251f;background:none;border:0;line-height:1.85;letter-spacing:3px}
+.single-sheet #deviceScreen textarea::placeholder{font-family:var(--brush);font-size:22px;color:#95846b}
+.single-sheet.reveal-scene #deviceScreen #result{padding:18px 12px 4px}
+.single-sheet.reveal-scene #deviceScreen .result-no{font:21px/1.5 var(--brush);letter-spacing:6px;color:#4a3b2c;margin:0 0 22px}
+.single-sheet.reveal-scene #deviceScreen #resultTitle{font:76px/1.3 var(--brush);letter-spacing:12px;color:#25211c;margin:0 0 25px;padding-left:12px;text-shadow:.3px .4px .6px #34271b44;filter:url('#inkImpression')}
+.single-sheet.reveal-scene #deviceScreen .poem{font:37px/1.7 var(--brush);letter-spacing:6px;gap:1px;color:#302820;text-shadow:.25px .3px .4px #34271b33}
+.single-sheet.reveal-scene #deviceScreen .result-seal{margin:16px 0 0;align-self:center;border:1px solid #a33d29;color:#a33d29;letter-spacing:2px;font:14px/1.3 var(--brush);padding:5px 7px;transform:rotate(-4deg)}
+.single-sheet #deviceScreen .meaning-text{color:#44382a;font-size:24px;line-height:2}
+.single-sheet #deviceScreen .reading-paper h1{color:#2d251e}
+.single-sheet #deviceScreen .read-meaning{color:#7d6346;border-color:#a18b6355}
+.single-sheet .cover-screen #deviceScreen #folded h2,.single-sheet #deviceScreen #coverGuide h2{color:#30271e}
+@media(max-width:650px){.single-sheet.native-host #deviceScreen #resultTitle{font-size:clamp(38px,8vw,58px);letter-spacing:7px;margin-bottom:18px}.single-sheet.native-host #deviceScreen .poem{font-size:clamp(23px,4.8vw,32px);letter-spacing:4px}.single-sheet.native-host #deviceScreen .result-no{font-size:17px;margin-bottom:17px}.single-sheet.native-host #deviceScreen #inkPlaceholder span{font-size:20px}.single-sheet.native-host #deviceScreen .meaning-text{font-size:22px}}
+@media(max-height:500px){.native-host.single-sheet.reveal-scene #deviceScreen #resultTitle{font-size:40px;margin-bottom:10px}.native-host.single-sheet.reveal-scene #deviceScreen .poem{font-size:25px;line-height:1.45}.native-host.single-sheet.reveal-scene #deviceScreen .result-no{font-size:15px;margin-bottom:10px}.native-host.single-sheet.reveal-scene #deviceScreen .result-seal{margin-top:10px;font-size:11px}}
+/* One typographic system across writing, cover, reveal and interpretation. */
+.single-sheet #deviceScreen,.single-sheet #deviceScreen button,.single-sheet #deviceScreen p,.single-sheet #deviceScreen span,.single-sheet #deviceScreen textarea{font-family:var(--brush);font-weight:400;font-synthesis:none}
+.single-sheet #deviceScreen .paper-top,.single-sheet #deviceScreen .guide-kicker,.single-sheet #deviceScreen .guide-seal,.single-sheet #deviceScreen #coverGuide>small,.single-sheet #deviceScreen .reading-eyebrow,.single-sheet #deviceScreen .reading-nav>span,.single-sheet #deviceScreen .reading-rule{display:none}
+.single-sheet #deviceScreen .actions:has(#resultActions[hidden]){display:none}
+.single-sheet #deviceScreen #coverGuide{padding:0;gap:0}
+.single-sheet #deviceScreen #coverGuide .unfold-drawing{width:160px;height:110px;margin-bottom:24px;opacity:.7}
+.single-sheet #deviceScreen #coverGuide h2{font:42px/1.5 var(--brush);letter-spacing:4px;margin:0 0 14px;filter:url('#inkImpression')}
+.single-sheet #deviceScreen #coverGuide>p{font:22px/1.8 var(--brush);color:#79674f;letter-spacing:2px}
+.single-sheet .cover-screen #deviceScreen #folded{padding-top:0}
+.single-sheet .cover-screen #deviceScreen #folded h2,.single-sheet .cover-screen #deviceScreen #folded:not(.is-complete) h2{font:39px/1.5 var(--brush);letter-spacing:4px;margin:0 0 10px;color:#2d251e}
+.single-sheet .cover-screen #deviceScreen #folded>p,.single-sheet .cover-screen #deviceScreen #folded:not(.is-complete)>p{font:21px/1.8 var(--brush);color:#79674f;letter-spacing:2px;max-width:280px}
+.single-sheet #deviceScreen .shake-instruction,.single-sheet #deviceScreen #beads{display:none}
+.single-sheet #deviceScreen .shake-count{font:19px/1.6 var(--brush);color:#9c4631;margin-top:10px;letter-spacing:3px}
+.single-sheet #deviceScreen .prayer-drawing{opacity:.8;margin-bottom:6px}
+.single-sheet #deviceScreen #shake,.single-sheet #deviceScreen #motion{font-family:var(--brush);color:#79674f}
+.single-sheet #deviceScreen .fold-mark{border:1px solid #a33d2977;color:#a33d29;background:none;font-family:var(--brush)}
+.single-sheet #deviceScreen .reading-paper h1{font:38px/1.5 var(--brush);margin:12px 0 15px;letter-spacing:5px}
+.single-sheet #deviceScreen .reading-lot{font:23px/1.7 var(--brush);letter-spacing:3px;margin:0 0 26px;color:#79674f}
+.single-sheet #deviceScreen .meaning-text{font:26px/1.95 var(--brush);letter-spacing:2px;color:#3c3025}
+.single-sheet #deviceScreen .question-recall{border:0;margin-top:28px;padding-top:0;color:#79674f}
+.single-sheet #deviceScreen .question-recall span{font-size:16px;letter-spacing:3px}
+.single-sheet #deviceScreen .question-recall p{font:22px/1.8 var(--brush);color:#61503c}
+.single-sheet #deviceScreen .reading-close{font:17px/1.8 var(--brush);color:#8b7860;margin-top:24px;letter-spacing:2px}
+.single-sheet #deviceScreen .reading-actions button,.single-sheet #deviceScreen .reading-actions #save,.single-sheet #deviceScreen .reading-nav button{font:18px/1.6 var(--brush);border:0;background:transparent;color:#79674f;padding:8px 16px}
+.single-sheet #deviceScreen .final-hint{font:14px/1.7 var(--brush);color:#9a8871}
+.single-sheet #deviceScreen .result-no{color:#393025}
+.single-sheet #deviceScreen .result-seal{writing-mode:vertical-rl;letter-spacing:2px}
+@media(max-width:650px){.single-sheet.native-host #deviceScreen .meaning-text{font-size:23px}.single-sheet.native-host #deviceScreen .reading-paper h1{font-size:32px}.single-sheet.native-host #deviceScreen #coverGuide h2{font-size:35px}.single-sheet.native-host #deviceScreen .reading-lot{font-size:20px}}
+/* Brush-written glyphs, dry bristles and ink-white gaps replace uniform printed edges. */
+.single-sheet.reveal-scene #deviceScreen #resultTitle,.single-sheet.reveal-scene #deviceScreen .poem,.single-sheet #deviceScreen #coverGuide h2,.single-sheet #deviceScreen #folded h2,.single-sheet #deviceScreen .reading-paper h1{filter:url('#calligraphyInk');text-shadow:none}
+.single-sheet.reveal-scene #deviceScreen #resultTitle{font-size:82px;letter-spacing:10px;line-height:1.3;transform:rotate(-1deg)}
+.single-sheet.reveal-scene #deviceScreen .poem{font-size:40px;letter-spacing:5px;line-height:1.7}
+.single-sheet #deviceScreen .prayer-hands{opacity:.88;filter:sepia(.25);mix-blend-mode:multiply}
+.single-sheet #deviceScreen .meaning-text{font-size:25px;line-height:2.05}
+@media(max-width:650px){.single-sheet.native-host #deviceScreen #resultTitle{font-size:clamp(40px,8vw,60px)}.single-sheet.native-host #deviceScreen .poem{font-size:clamp(24px,5vw,33px)}}
+@media(max-height:500px){.native-host.single-sheet.reveal-scene #deviceScreen #resultTitle{font-size:40px}.native-host.single-sheet.reveal-scene #deviceScreen .poem{font-size:25px}}

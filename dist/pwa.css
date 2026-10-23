@@ -1,0 +1,8 @@
+.web-test-note{font-size:11px;color:#83775d;line-height:1.8;text-align:center;margin:0 0 12px}
+.test-toolbar{display:flex;align-items:center;justify-content:center;gap:14px;margin:12px 0;flex-wrap:wrap}
+.test-toolbar span{font-size:10px;letter-spacing:1px;color:#8c5036}
+.test-toolbar button{border:1px solid #a38e6555;background:#f0e2c333;color:#645538;padding:11px 18px;min-height:44px;font-size:12px;letter-spacing:1px}
+#showTestTools{font-size:11px;min-height:36px;text-decoration:underline;text-underline-offset:4px}
+#webInstallStatus{font-size:10px;text-align:center;color:#8c8068;line-height:1.9;padding:0 12px}
+.native-host .test-toolbar,.native-host .web-test-note,.native-host #webInstallStatus,.native-host #showTestTools{display:none!important}
+@media(max-width:650px){.preview-tools{padding:14px;background:#e9dcc3;border:1px solid #ac967250;border-radius:6px}.test-toolbar{gap:10px}.test-toolbar button{padding:12px 18px}}

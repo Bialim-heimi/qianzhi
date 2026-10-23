@@ -1,0 +1,27 @@
+:root{--brush:'Kaiti SC','STKaiti','KaiTi','楷体','DFKai-SB',serif}
+.single-sheet #deviceScreen{background-color:#eee4ce;background-image:url('paper-fibers.svg'),radial-gradient(ellipse at 40% 35%,#fff9e15c,transparent 65%),linear-gradient(105deg,#b8a27a14,transparent 36%,#fff7db25 60%,#9c875e12);background-size:600px 600px,100% 100%,100% 100%}
+.single-sheet #deviceScreen:before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;box-shadow:inset 0 0 65px #947b4710;background:radial-gradient(ellipse at 12% 78%,#a8905b08,transparent 30%),radial-gradient(ellipse at 85% 15%,#a8905b0c,transparent 28%)}
+.single-sheet #deviceScreen #writing{max-width:740px;padding:53px 0 0;height:100%;display:flex;flex-direction:column}
+.single-sheet #deviceScreen .wish-note{margin:0 0 10px;color:#9b835c;font-family:var(--brush);letter-spacing:5px}
+.single-sheet #deviceScreen .writing-heading{font:30px/1.5 var(--brush);letter-spacing:3px;text-align:center;margin:0 0 10px;font-weight:400;color:#414332}
+.ink-surface{position:relative;width:100%;aspect-ratio:1000/340;min-height:0}
+#inkCanvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair;outline:none;background:transparent;border:0}
+#inkCanvas:focus-visible{outline:1px dashed #87765366;outline-offset:4px}
+#inkPlaceholder{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;pointer-events:none;color:#a2967b}
+#inkPlaceholder span{font:24px/1.8 var(--brush);letter-spacing:5px;opacity:.75}
+#inkPlaceholder small{font:11px/1.6 'SimSun',serif;letter-spacing:4px;opacity:.7}
+.ink-tools{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:40px}
+#inkStatus{font:10px/1.7 'SimSun',serif;color:#9c9076;letter-spacing:1px}
+.ink-tools .quiet,.single-sheet #deviceScreen #inputMode{font:11px/1.5 'SimSun',serif;color:#857659;min-height:38px;padding:9px 12px;letter-spacing:1px}
+.ink-tools .quiet:disabled{opacity:.3}
+.writing-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:7px;color:#9c8d70;font:10px 'SimSun',serif;letter-spacing:2px;gap:20px}
+.single-sheet #deviceScreen #inputMode{border-bottom:1px solid #a18b6338;padding-right:3px;padding-left:6px;white-space:nowrap}
+.single-sheet #deviceScreen #keyboardInput{flex:1;padding-top:6px}
+.single-sheet #deviceScreen textarea{font-family:var(--brush);font-size:25px;line-height:38px;height:192px;margin-top:12px}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.single-sheet.reveal-scene #deviceScreen #resultTitle{font-family:var(--brush);font-size:58px;letter-spacing:9px;color:#303b2e;text-shadow:.35px .45px .5px #28322255,-.3px -.2px .4px #5f5a3d33}
+.single-sheet.reveal-scene #deviceScreen .poem{font-family:var(--brush);font-size:31px;letter-spacing:5px;color:#3f4533;text-shadow:.3px .3px .5px #38403233}
+.single-sheet #deviceScreen .reading-paper h1,.single-sheet #deviceScreen .meaning-text,.single-sheet .cover-screen #deviceScreen #folded h2{font-family:var(--brush)}
+.single-sheet #deviceScreen .meaning-text{font-size:22px}
+.single-sheet #deviceScreen #askedInk{display:block;width:100%;height:auto;max-height:240px;object-fit:contain;object-position:left center;margin-top:8px;mix-blend-mode:multiply}
+@media(max-width:650px){.single-sheet.native-host #deviceScreen #writing{padding-top:42px}.single-sheet.native-host #deviceScreen .writing-heading{font-size:24px}.single-sheet.native-host #inkPlaceholder span{font-size:18px;letter-spacing:2px}.single-sheet.native-host #inkStatus{font-size:9px}.single-sheet.native-host .ink-tools{flex-wrap:wrap;gap:0}.single-sheet.native-host #deviceScreen #resultTitle{font-size:42px}.single-sheet.native-host #deviceScreen .poem{font-size:26px}}

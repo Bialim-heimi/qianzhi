@@ -1,0 +1,58 @@
+/* The unveiling has its own quiet, moonlit stage. */
+body{transition:background-color 1.1s,color .8s;isolation:isolate}
+.atmosphere{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;opacity:0;transition:opacity 1.2s;background:radial-gradient(ellipse at 50% 42%,#3e5141 0,#243a30 42%,#132b24 100%)}
+.reveal-scene .atmosphere{opacity:1}
+.moon{position:absolute;width:clamp(100px,17vw,220px);aspect-ratio:1;right:15%;top:13%;border-radius:50%;background:radial-gradient(circle at 36% 34%,#e8dfbc55,#d0c69e1a 68%,#e7dfb40a);box-shadow:0 0 90px 28px #e6ddb00b;filter:blur(.5px)}
+.halo{position:absolute;inset:5% 13%;background:radial-gradient(ellipse,#c6b57b15,transparent 65%);animation:breathing-light 9s ease-in-out infinite alternate}
+.mountains{position:absolute;bottom:0;left:0;width:100%;height:65%}
+.mist{position:absolute;inset:45% -20% -25%;background:radial-gradient(ellipse at 35% 50%,#b8c5af12,transparent 45%),radial-gradient(ellipse at 70% 75%,#b8c5af0d,transparent 40%);filter:blur(20px);animation:mist-drift 20s ease-in-out infinite alternate}
+.reveal-scene header,.reveal-scene footer{border-color:#d4dac31c}
+.reveal-scene .brand{color:#dedbc5}.reveal-scene header .quiet,.reveal-scene footer,.reveal-scene footer .quiet{color:#b0bbab}
+.reveal-scene #ritualPage{display:block;max-width:920px;min-height:calc(100svh - 180px);padding:28px 38px 32px}
+.reveal-scene .intro,.reveal-scene .under-note{display:none}
+.reveal-scene .stage-label{max-width:560px;margin:0 auto 24px;color:#bdc3aa;letter-spacing:3px}
+.reveal-scene .stage-label span:last-child{display:none}
+.reveal-scene .stage-label:after{content:'一 念 有 应';font-size:9px;color:#aeb59e}
+.reveal-scene .paper-wrap{height:470px}
+.reveal-scene .paper{width:390px;max-width:100%;height:470px;padding:29px 32px;background-color:#eee5cc;box-shadow:0 30px 85px #08171180,0 0 60px #e4d8b00a;animation:paper-unveil 1.5s cubic-bezier(.16,1,.3,1) both}
+.reveal-scene .paper:after{content:'';position:absolute;inset:12px;border:1px solid #95826035;pointer-events:none}
+.reveal-scene .paper-top{font-size:9px}
+.reveal-scene .paper-seal{border:0;padding:0}
+.reveal-scene .crease{opacity:.65}
+.reveal-scene .result-no{margin-top:28px;letter-spacing:4px;animation:ink-arrive 1.4s .35s both}
+.reveal-scene #resultTitle{font:40px/1.4 Georgia,'STSong','SimSun',serif;letter-spacing:10px;margin:20px 0 24px;padding-left:10px;animation:ink-arrive 1.5s .65s both;outline:none}
+.reveal-scene .poem{display:flex;flex-direction:row-reverse;justify-content:center;gap:24px;height:153px;font:22px/1.8 'STSong','SimSun',serif;letter-spacing:7px;animation:ink-arrive 1.6s 1s both}
+.poem-line{writing-mode:vertical-rl;text-orientation:upright}
+.reveal-bottom{margin-top:24px;font:9px 'SimSun',serif;color:#9a8b6e;letter-spacing:3px;animation:ink-arrive 1.5s 1.3s both}
+.reveal-scene .result-seal{right:29px;bottom:35px;writing-mode:vertical-rl;width:26px;letter-spacing:3px;font-size:10px;padding:6px 4px;animation:ink-arrive 1.2s 1.5s both}
+.reveal-scene .actions{margin-top:25px;min-height:0;animation:ink-arrive 1.3s 1.6s both}
+.reveal-scene .actions>p{color:#b6bea9;font:12px 'SimSun',serif;letter-spacing:3px;margin:0 0 18px}
+.read-meaning{min-width:210px;padding:14px 28px;background:#d9d5b908;border:1px solid #ddd4af55;color:#e3ddc2;letter-spacing:3px;font-size:12px;transition:background .3s}
+.read-meaning:hover{background:#d9d5b91a}
+.read-meaning:focus-visible{outline-color:#e3ddc2}
+.interpretation-page{display:block;max-width:760px;min-height:calc(100svh - 180px);padding:25px 30px 35px;animation:reading-arrive .7s ease-out both}
+.reading-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;color:#838975;font-size:10px;letter-spacing:2px}
+.reading-nav .quiet{padding-left:0;color:#606f60}
+.reading-paper{position:relative;padding:44px 65px 34px;background:#f7f1e3;background-image:linear-gradient(110deg,#ffffff25,transparent 50%,#b5a78207);box-shadow:0 15px 45px #283e2d08;border:1px solid #b2a7862b}
+.reading-eyebrow{font:11px 'SimSun',serif;letter-spacing:7px;color:var(--red)}
+.reading-paper h1{font:32px/1.6 'STSong','SimSun',serif;letter-spacing:4px;margin:18px 0 8px;outline:none}
+.reading-lot{font:12px 'SimSun',serif;color:#8b8069;letter-spacing:3px}
+.reading-rule{display:flex;align-items:center;gap:14px;margin:25px 0;color:#a6936b;font-size:12px}
+.reading-rule:before,.reading-rule:after{content:'';height:1px;flex:1;background:#b9a88040}
+.meaning-text{font:20px/2.2 'STSong','SimSun',serif;letter-spacing:1.5px;margin:0;color:#3e4b3c;overflow-wrap:anywhere}
+.question-recall{margin-top:28px;padding:19px 0 0;border-top:1px solid #b9a88040}
+.question-recall>span{font-size:10px;color:#9b8b6e;letter-spacing:3px}
+.question-recall p{font:13px/1.9 'SimSun',serif;color:#7e806c;margin:10px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.reading-close{text-align:right;font:11px 'SimSun',serif;letter-spacing:2px;color:#9e947c;margin:25px 0 0}
+.reading-actions{display:flex;justify-content:center;gap:20px;margin-top:25px;align-items:center}
+.reading-actions #save{background:var(--ink);color:#eeeadd;padding:15px 27px;min-width:170px;font-size:12px;letter-spacing:2px}
+.reading-actions .quiet{color:#697761;letter-spacing:2px}
+.final-hint{min-height:16px;text-align:center;color:#858c7c;font-size:10px;letter-spacing:1px;margin:18px 0 0}
+@keyframes paper-unveil{from{opacity:0;transform:translateY(24px) rotateY(-22deg) scale(.94);filter:brightness(.8)}to{opacity:1;transform:translateY(0) rotateY(0) scale(1);filter:brightness(1)}}
+@keyframes ink-arrive{from{opacity:0;transform:translateY(9px);filter:blur(4px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes reading-arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes breathing-light{to{opacity:.45;transform:scale(1.1)}}
+@keyframes mist-drift{to{transform:translateX(6%) translateY(-2%)}}
+@media(max-width:800px){.reveal-scene #ritualPage{padding:24px 22px 32px;min-height:calc(100svh - 190px)}.moon{right:-20px;top:12%;width:180px}.reveal-scene .paper-wrap,.reveal-scene .paper{height:450px}.reveal-scene .paper{width:360px;padding:26px}.reveal-scene #resultTitle{font-size:34px;letter-spacing:7px}.reveal-scene .poem{font-size:21px;height:148px}.reveal-scene .stage-label{font-size:9px}.reveal-scene .result-seal{bottom:30px;right:24px}.reveal-bottom{letter-spacing:2px}.interpretation-page{padding:20px 20px 30px}.reading-paper{padding:32px 26px 28px}.reading-paper h1{font-size:28px;letter-spacing:2px}.meaning-text{font-size:18px;line-height:2.1}.reading-nav{letter-spacing:1px;font-size:9px}.reading-close{font-size:10px}.final-hint{line-height:1.8}}
+@media(max-width:360px){.reveal-scene #resultTitle{font-size:29px;letter-spacing:5px}.reveal-scene .paper{padding:25px 20px}.reveal-scene .paper-top{letter-spacing:2px}.reading-paper{padding:26px 20px}.reading-paper h1{font-size:24px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}

@@ -1,0 +1,96 @@
+/* One continuous sheet: the display itself is the paper, in every ritual state. */
+.single-sheet #deviceScreen{
+  background-color:#f4eddd;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.055' filter='url(%23f)'/%3E%3C/svg%3E"),radial-gradient(ellipse at 45% 28%,#fff9e755,transparent 70%),linear-gradient(110deg,#d9c6a112,transparent 32%,#fffbed16 65%,#cdbb9910);
+}
+.single-sheet #deviceScreen:after{width:15px;left:calc(50% - 7px);background:linear-gradient(90deg,transparent,#8e795006 43%,#fffbee18 58%,transparent);box-shadow:none;z-index:0}
+.single-sheet .screen-content,.single-sheet.native-host .screen-content{inset:0}
+.single-sheet #deviceScreen .atmosphere{background:radial-gradient(ellipse at 50% 35%,#fff9e322,transparent 70%);opacity:0;transition:opacity 1.8s}
+.single-sheet.reveal-scene #deviceScreen .atmosphere{opacity:1}
+.single-sheet #deviceScreen .moon{background:radial-gradient(circle,#d8b87918,transparent 72%);box-shadow:none;filter:blur(5px);width:280px;right:-40px;top:-40px}
+.single-sheet #deviceScreen .mountains{height:52%;opacity:.13;filter:blur(1px)}
+.single-sheet #deviceScreen .mist{background:radial-gradient(ellipse at 45% 40%,#fffaf18c,transparent 65%);filter:blur(24px)}
+.single-sheet #deviceScreen .halo{background:radial-gradient(ellipse,#ead5a321,transparent 70%)}
+.single-sheet #deviceScreen #ritualPage{padding:26px 46px 22px;overflow:auto}
+.single-sheet #deviceScreen .ritual{display:grid;grid-template-rows:minmax(0,1fr) auto;min-height:0;height:100%;gap:0}
+.single-sheet #deviceScreen .stage-label{display:none}
+.single-sheet #deviceScreen .paper-wrap{grid-row:1;height:100%;min-height:0;display:block;perspective:none}
+.single-sheet #deviceScreen .paper,
+.single-sheet .cover-screen #deviceScreen .paper,
+.single-sheet.reveal-scene #deviceScreen .paper,
+.single-sheet #deviceScreen .reading-paper{
+  width:100%;max-width:none;height:100%;max-height:none;min-height:0;margin:0;padding:0;
+  border:0;border-radius:0;background:none;box-shadow:none;transform:none;animation:none;
+}
+.single-sheet #deviceScreen .paper:after,.single-sheet #deviceScreen .crease{display:none}
+.single-sheet #deviceScreen .paper-top{position:absolute;top:0;left:0;right:0;align-items:center;color:#a2967b;font-size:10px;letter-spacing:4px;z-index:1}
+.single-sheet #deviceScreen .paper-seal{padding:5px;border:1px solid #a3453259;color:#a35a44;font-size:10px}
+.single-sheet #deviceScreen #writing{max-width:640px;margin:auto;padding:78px 0 0}
+.single-sheet #deviceScreen .wish-note{position:static;text-align:center;margin:0 0 20px;letter-spacing:5px;font:11px 'SimSun',serif;color:#a58c68}
+.single-sheet #deviceScreen label{margin:0;font:28px/1.7 'STSong','SimSun',serif;letter-spacing:3px}
+.single-sheet #deviceScreen textarea{margin-top:24px;background:repeating-linear-gradient(transparent,transparent 37px,#9b8b6d22 38px);border-bottom-color:#a9967522;font-size:20px;height:153px;color:#3f493a}
+.single-sheet #deviceScreen textarea::placeholder{font-size:14px;color:#a59b85}
+.single-sheet #deviceScreen .count{margin-top:10px;color:#a59b85}
+.single-sheet #deviceScreen .paper-footer{margin-top:20px;padding-top:16px;border-top:1px solid #a9967529;font-size:10px;letter-spacing:3px}
+.single-sheet #deviceScreen .actions{grid-row:2;align-self:end;min-height:42px;padding:12px 0 0;gap:4px;animation:none}
+.single-sheet #deviceScreen .actions>p{margin:0;color:#9a8e73;font:11px/1.8 'SimSun',serif;letter-spacing:2px;max-width:100%}
+/* The reveal is a single centred composition; no column or hinge-based partition. */
+.single-sheet.reveal-scene #deviceScreen #result{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  width:100%;height:100%;padding:30px 20px 12px;gap:0;position:relative;text-align:center;
+}
+.single-sheet.reveal-scene #deviceScreen .result-no{position:static;width:auto;margin:0 0 18px;font:11px/1.6 'SimSun',serif;letter-spacing:5px;color:#a05c43}
+.single-sheet.reveal-scene #deviceScreen #resultTitle{margin:0 0 28px;padding:0 0 0 10px;font:52px/1.4 'STSong','SimSun',serif;letter-spacing:10px;color:#334435;outline:none}
+.single-sheet.reveal-scene #deviceScreen .poem{display:flex;flex-direction:column;align-items:center;justify-content:center;align-self:center;width:100%;height:auto;margin:0;gap:12px;font:27px/1.65 'STSong','SimSun',serif;letter-spacing:6px;color:#46513f}
+.single-sheet #deviceScreen .poem-line{writing-mode:horizontal-tb;white-space:normal;text-align:center}
+.single-sheet.reveal-scene #deviceScreen .reveal-bottom{margin:30px 0 0;font:10px/1.7 'SimSun',serif;letter-spacing:4px;color:#a09477}
+.single-sheet.reveal-scene #deviceScreen .result-seal{position:static;align-self:center;margin:18px 0 0;padding:5px 8px;width:auto;writing-mode:horizontal-tb;font:11px/1.4 'SimSun',serif;letter-spacing:3px;border:1px solid #a3453280;color:#a34532;transform:rotate(-5deg)}
+.single-sheet.reveal-scene #deviceScreen .actions{padding-top:4px}
+.single-sheet #deviceScreen .read-meaning{background:transparent;border:0;border-bottom:1px solid #8e795052;color:#657153;min-width:150px;min-height:44px;padding:10px 18px;font:12px/1.5 'SimSun',serif;letter-spacing:3px}
+.single-sheet #deviceScreen .read-meaning:hover{color:#a34532;border-bottom-color:#a34532;background:#b49b6108}
+.single-sheet #deviceScreen .read-meaning:focus-visible{outline-color:#a34532}
+/* Folded paper fills the D-shaped cover too. Only the ink moves when shaken. */
+.single-sheet .cover-screen #deviceScreen #ritualPage{padding:30px 40px 25px 25px}
+.single-sheet .cover-screen #deviceScreen #folded{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:35px}
+.single-sheet .cover-screen #deviceScreen .fold-mark{margin:0 0 32px;width:52px;height:52px;font-size:26px;color:#a34532}
+.single-sheet .cover-screen #deviceScreen #folded h2{margin:0 0 20px;font:28px/1.5 'SimSun',serif;letter-spacing:5px}
+.single-sheet .cover-screen #deviceScreen #folded p{max-width:245px;font:14px/2 'SimSun',serif;color:#8d8066;margin:0}
+.single-sheet .cover-screen #deviceScreen .beads{margin:24px 0 14px}
+.single-sheet #deviceScreen .paper.shake #folded{animation:paper-ink-sway .5s}
+@keyframes paper-ink-sway{25%,75%{transform:translateX(-3px) rotate(-1deg)}50%{transform:translateX(3px) rotate(1deg)}}
+/* The final interpretation is also written on the same full sheet. */
+.single-sheet #deviceScreen #interpretationPage{padding:24px 46px 22px;overflow:auto}
+.single-sheet #deviceScreen .reading-nav{margin:0 0 15px}
+.single-sheet #deviceScreen .reading-paper{display:block;height:auto;max-width:660px;margin:0 auto;text-align:center}
+.single-sheet #deviceScreen .reading-eyebrow{font-size:10px;letter-spacing:6px;margin-top:8px}
+.single-sheet #deviceScreen .reading-paper h1{font:30px/1.5 'SimSun',serif;margin:15px 0 10px;letter-spacing:3px}
+.single-sheet #deviceScreen .reading-lot{margin:0 0 24px;letter-spacing:3px}
+.single-sheet #deviceScreen .meaning-text{font:20px/2.1 'SimSun',serif;letter-spacing:2px;margin:0 auto;max-width:580px;text-align:left}
+.single-sheet #deviceScreen .question-recall{margin:24px 0 0;padding-top:18px;border-top:1px solid #a9967533;text-align:left}
+.single-sheet #deviceScreen .question-recall p{max-height:none;font:13px/1.9 'SimSun',serif;overflow:visible}
+.single-sheet #deviceScreen .reading-close{margin:18px 0 0;text-align:center}
+.single-sheet #deviceScreen .reading-actions{margin-top:24px}
+.single-sheet #deviceScreen .reading-actions #save{background:transparent;color:#627052;border:1px solid #8e795052;padding:11px 24px}
+.single-sheet #deviceScreen .final-hint{margin-top:14px;color:#a0947b}
+@media(max-width:650px){
+  .single-sheet.native-host #deviceScreen #ritualPage{padding:20px 24px 18px}
+  .single-sheet.native-host #deviceScreen #writing{padding-top:55px}
+  .single-sheet.native-host #deviceScreen .wish-note{display:block;margin-bottom:14px}
+  .single-sheet.native-host #deviceScreen label{font-size:22px}
+  .single-sheet.native-host #deviceScreen #result{padding:38px 10px 12px;gap:0}
+  .single-sheet.native-host #deviceScreen #resultTitle{font-size:36px;letter-spacing:7px;margin:0 0 24px}
+  .single-sheet.native-host #deviceScreen .poem{font-size:23px;letter-spacing:4px;gap:10px}
+  .single-sheet.native-host #deviceScreen .reveal-bottom{margin-top:24px}
+  .single-sheet.native-host #deviceScreen #interpretationPage{padding:20px 25px}
+  .single-sheet.native-host #deviceScreen .reading-paper{padding:0}
+  .single-sheet.native-host #deviceScreen .reading-paper h1{font-size:26px}
+  .single-sheet.native-host #deviceScreen .meaning-text{font-size:18px;margin:0}
+}
+@media(max-height:520px){
+  .single-sheet.native-host #deviceScreen .ritual{min-height:420px}
+  .single-sheet.native-host #deviceScreen #resultTitle{font-size:34px;margin-bottom:16px}
+  .single-sheet.native-host #deviceScreen .poem{font-size:22px;gap:8px}
+  .single-sheet.native-host #deviceScreen .reveal-bottom{margin-top:14px}
+  .single-sheet.native-host #deviceScreen .result-seal{margin-top:12px}
+}
+@media(prefers-reduced-motion:reduce){.single-sheet #deviceScreen *{animation:none!important;transition:none!important}}

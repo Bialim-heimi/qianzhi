@@ -1,0 +1,28 @@
+/* The paper is for the user's hand. Only tools remain at its lower edge. */
+.device-meta,.device-caption{display:none}
+header{height:58px;border:0}
+footer{padding:10px 30px;border:0}
+footer>span:last-child{display:none}
+.device-experience{padding-top:10px}
+.single-sheet #deviceScreen #ritualPage:has(#writing:not([hidden])){padding:23px 24px 16px}
+.single-sheet #deviceScreen #ritualPage:has(#writing:not([hidden])) .ritual{grid-template-rows:minmax(0,1fr)}
+.single-sheet #deviceScreen #ritualPage:has(#writing:not([hidden])) .actions{display:none}
+.single-sheet #deviceScreen #writing{max-width:none;padding:26px 0 0;min-height:0;height:100%;gap:0}
+#inkInput{flex:1;min-height:0;display:flex;flex-direction:column}
+.single-sheet #deviceScreen .ink-surface{flex:1;aspect-ratio:auto;min-height:160px;width:100%}
+.single-sheet #deviceScreen .ink-tools{min-height:34px;flex-shrink:0}
+.single-sheet #deviceScreen .writing-bottom{min-height:34px;margin-top:0;padding:0 6px;flex-shrink:0}
+.single-sheet #deviceScreen .writing-bottom>span{font:12px var(--brush);letter-spacing:3px;color:#947a52}
+.single-sheet #deviceScreen #inkStatus{font-size:10px;letter-spacing:1px;color:#9d8c6c}
+.single-sheet #deviceScreen #inkPlaceholder span{font:22px/1.8 var(--brush);letter-spacing:5px;color:#9b8966;opacity:.5}
+.single-sheet #deviceScreen .ink-tools .quiet,.single-sheet #deviceScreen #inputMode{font-size:10px;min-height:34px;padding:7px 10px}
+.single-sheet #deviceScreen #keyboardInput{display:flex;flex-direction:column;min-height:0;padding-top:30px}
+.single-sheet #deviceScreen textarea{height:auto;min-height:120px;flex:1;margin-top:0;font-size:28px}
+.single-sheet #deviceScreen .count{font-size:9px;margin-top:8px}
+.single-sheet #deviceScreen .paper-top{font-size:10px;opacity:.65}
+.single-sheet #deviceScreen .paper-top>span:first-child{visibility:hidden}
+.single-sheet.reveal-scene #deviceScreen .reveal-bottom:empty{display:none}
+.single-sheet #deviceScreen .reading-close{font-size:12px}
+#showTestTools{display:block;margin:8px auto;color:#8f8268;font-size:10px}
+.preview-tools{margin-top:5px}
+@media(max-width:650px){.single-sheet.native-host #deviceScreen #writing{padding-top:20px}.single-sheet.native-host #deviceScreen #ritualPage:has(#writing:not([hidden])){padding:20px 18px 12px}.single-sheet.native-host #deviceScreen .ink-tools{flex-wrap:nowrap;gap:5px}.single-sheet.native-host #inkStatus{font-size:9px}.single-sheet.native-host #deviceScreen #inkPlaceholder span{font-size:18px}}

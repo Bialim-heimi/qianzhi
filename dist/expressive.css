@@ -1,0 +1,49 @@
+@font-face{font-family:'Qian Brush';src:url('fonts/MaShanZheng-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+:root{--brush:'Qian Brush','Kaiti SC','STKaiti','KaiTi',serif;--paper:#e6d4ad}
+.ink-filter-defs{position:absolute;pointer-events:none;overflow:hidden}
+.single-sheet #deviceScreen{
+  background-color:#e6d4ad;
+  background-image:url('paper-fibers.svg'),radial-gradient(ellipse at 48% 38%,#fff5ce99,transparent 73%),linear-gradient(110deg,#94703d33,transparent 28%,#fdf0c744 52%,#9b764122);
+  background-size:460px 460px,100% 100%,100% 100%;
+}
+.single-sheet #deviceScreen:before{box-shadow:inset 0 0 85px #6a4b282e;background:radial-gradient(ellipse at 5% 90%,#7d572c21,transparent 42%),radial-gradient(ellipse at 93% 8%,#98744022,transparent 34%);mix-blend-mode:multiply}
+.single-sheet #deviceScreen:after{width:24px;left:calc(50% - 12px);background:linear-gradient(90deg,transparent,#74552a0c 40%,#fff4cf35 57%,transparent)}
+.single-sheet #deviceScreen .writing-heading{font:38px/1.45 var(--brush);letter-spacing:3px;color:#2d3025;filter:url('#inkImpression');text-shadow:.5px .6px .8px #42351c55}
+.single-sheet #deviceScreen .wish-note{font:15px/1.6 var(--brush);color:#8d4e32;letter-spacing:6px}
+.single-sheet #inkPlaceholder span{font:30px/1.7 var(--brush);color:#756345;opacity:.68;letter-spacing:5px}
+.single-sheet #inkPlaceholder small{color:#91774c;opacity:.9}
+.single-sheet #deviceScreen .paper-top{font-family:var(--brush);font-size:13px;color:#82663e}
+.single-sheet #deviceScreen .paper-seal{font-family:var(--brush);font-size:13px;border-color:#8f3d2b99;color:#8f3d2b}
+.single-sheet.reveal-scene #deviceScreen #resultTitle{font:68px/1.3 var(--brush);letter-spacing:8px;color:#252d23;filter:url('#inkImpression');text-shadow:.6px .6px 1px #2b281d66,-.4px -.2px .8px #6a563455}
+.single-sheet.reveal-scene #deviceScreen .poem{font:36px/1.6 var(--brush);letter-spacing:5px;color:#34382a;filter:url('#inkImpression');text-shadow:.4px .4px .65px #423a2550}
+.single-sheet #deviceScreen .reading-paper h1{font-family:var(--brush);font-size:37px;filter:url('#inkImpression')}
+.single-sheet #deviceScreen .meaning-text{font-family:var(--brush);font-size:25px;line-height:1.9;color:#3f3b28}
+.single-sheet #deviceScreen .reading-eyebrow,.single-sheet #deviceScreen .reading-lot,.single-sheet #deviceScreen .result-no{font-family:var(--brush);font-size:14px}
+.single-sheet .cover-screen #deviceScreen #folded h2{font:34px/1.5 var(--brush);filter:url('#inkImpression')}
+.single-sheet #deviceScreen .fold-mark,.single-sheet #deviceScreen .result-seal{font-family:var(--brush)}
+/* Closed-screen entry: a folded sheet inviting the reader to open it. */
+#coverGuide,#startup{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px 0 0}
+.guide-kicker{font:13px/1.8 var(--brush);letter-spacing:6px;color:#8d4e32;margin-bottom:15px}
+.unfold-drawing{width:195px;height:133px;margin-bottom:19px;overflow:visible}
+.guide-page{fill:#fff0c22b;stroke:#68542d;stroke-width:1.3;stroke-linejoin:round}
+.guide-lines{fill:none;stroke:#705a36;stroke-width:1;opacity:.42}
+.guide-spine{fill:none;stroke:#8e6434;stroke-width:1;opacity:.45}
+.guide-arrows{fill:none;stroke:#995037;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;animation:unfold-invitation 3.4s ease-in-out infinite}
+.single-sheet #deviceScreen #coverGuide h2{font:37px/1.5 var(--brush);letter-spacing:4px;color:#2f3527;margin:0 0 15px;filter:url('#inkImpression')}
+#coverGuide>p{font:20px/1.9 var(--brush);letter-spacing:2px;color:#635131;margin:0}
+.guide-seal{font:13px/1.6 var(--brush);color:#98442e;border:1px solid #98442e99;padding:4px 8px;transform:rotate(-5deg);margin-top:23px;letter-spacing:3px}
+#coverGuide>small{font:10px/1.9 'SimSun',serif;color:#90754c;letter-spacing:1px;margin-top:25px}
+.startup-mark{font:34px/1.5 var(--brush);color:#9b5035;border:1px solid #9b503580;padding:6px 17px;margin-bottom:22px}
+#startup h2{font:30px/1.6 var(--brush);color:#4e462d;margin:0 0 14px}
+#startup p{font:17px/1.8 var(--brush);color:#90754c;margin:0}
+.launch-preview{display:flex;align-items:center;gap:12px;margin:10px 0;border-bottom:1px solid #9b927b33;padding-bottom:8px;font-size:11px}
+.launch-preview button{border:1px solid #9b927b55;padding:8px 12px;font-size:11px}
+@keyframes unfold-invitation{50%{opacity:.35;transform:translateY(2px)}}
+@media(max-width:650px){.single-sheet.native-host #deviceScreen .writing-heading{font-size:29px}.single-sheet.native-host #inkPlaceholder span{font-size:23px}.single-sheet.native-host #deviceScreen #resultTitle{font-size:48px}.single-sheet.native-host #deviceScreen .poem{font-size:29px}.single-sheet.native-host #deviceScreen .meaning-text{font-size:22px}.single-sheet.native-host #coverGuide{padding-top:15px}}
+@media(prefers-reduced-motion:reduce){.guide-arrows{animation:none}}
+/* Keep the cover invitation legible without an inner card or unnecessary scrolling. */
+#coverGuide{padding-top:6px}
+#coverGuide .guide-kicker{margin-bottom:10px}
+#coverGuide .unfold-drawing{width:170px;height:116px;margin-bottom:14px;flex-shrink:0}
+#coverGuide>small{margin-top:20px}
+@media(max-height:600px){.native-host #coverGuide .unfold-drawing{width:135px;height:92px}.native-host #coverGuide .guide-seal{margin-top:16px}.native-host #coverGuide>small{margin-top:16px}.native-host #deviceScreen #coverGuide h2{font-size:32px}.native-host #coverGuide>p{font-size:18px}}
