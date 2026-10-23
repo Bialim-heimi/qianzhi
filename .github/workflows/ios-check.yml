@@ -1,0 +1,29 @@
+name: iOS compile check
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'ios/**'
+      - 'dist/**'
+      - 'scripts/ios-build.sh'
+      - '.github/workflows/ios-check.yml'
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build without signing
+        run: bash scripts/ios-build.sh
+      - name: Keep build logs and simulator app
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qianzhi-ios-compile
+          path: |
+            build/ios-build.log
+            build/toolchain.txt
+            build/DerivedData/Build/Products/Debug-iphonesimulator/QianZhi.app
+          if-no-files-found: warn
